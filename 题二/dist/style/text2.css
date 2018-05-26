@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px auto;padding:0px;}
+ul{list-style: none;}
+a{text-decoration: none;}
+img{width: 730px;height: 454px;}
+.box{width: 730px;height: 454px;margin-top:100px;position: relative;overflow: hidden;}
+.box-in{width: 6000px;position: absolute;top:0px;left: 0px;}
+.box-in li{float: left;}
+.btn{width: 730px;height: 30px;position: absolute;top:50%;left: 50%;margin-left: -365px;margin-top: -15px;}
+.btn a{width: 50px;height: 70px;background: pink;color: #fff;line-height: 70px;text-align: center;font-size: 30px;}
+.zuo{float: left;}
+.you{float: right;}
+.circle{width: 150px;height: 30px;bottom: 10px;right:10px;position: absolute;}
+.circle span{width: 18px;height: 18px;border-radius: 50%;background-color: white;float: left;text-align: center;line-height: 18px;margin-right: 5px;cursor: pointer;}
+.circle span.current{background: purple;}
