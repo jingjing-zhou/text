@@ -5,6 +5,7 @@ define(["jquery"],function () {
     text1ajax.prototype={
         constructor:text1ajax(),
         init(){
+            //通过接口获取导数据
             this.url = "http://mce.meilishuo.com/jsonp/get/3?offset=0&frame=1&trace=0&limit=10&endId=0&pid=106888&_=1526528205879"
 
             this.load = {
@@ -18,16 +19,14 @@ define(["jquery"],function () {
                 this.LoadHtml()
             }.bind(this))
         },
+        //页面加载
         LoadHtml(){
             //console.log(this.url)
             console.log(this.productData.data.list)
                 var textitem=this.productData.data.list;
-            // console.log(this.productData.result.uClassList.data[1].data)
-            // console.log(this.productData.result.uClassList.data[2].data)
-            // var proitem = this.productData.result.uClassList.data[1].data;
-            // var proitem1 =this.productData.result.uClassList.data[2].data;
+
              var html = ``;
-            // var html2=``;
+           //拼接页面
             for(var i=0;i<textitem.length;i++){
                 html += ` <div class="beauty_poster data-ptp-item waterfall-0 waterfall-box waterfall-optimise-show" style="width: 224px;top: 0px;left: 0px;">
                        <div class="picBox lazyload-img-start lazyload-img-end">
@@ -50,23 +49,7 @@ define(["jquery"],function () {
                         
                `
             }
-            // for(var i=0;i<proitem1.length;i++){
-            //     html2 += `<div class="pro-item taga ">
-            //                 <div class="pro-img m-img-hover">
-            //                     <img src="${proitem[i].pic_url}" >
-            //                 </div>
-            //                 <div class="prp-tags-con"></div>
-            //                 <p class="pro-info" title="${proitem[i].name}">${proitem[i].name}</p>
-            //                 <p class="pro-desc" title="${proitem[i].summary}">${proitem[i].summary} </p>
-            //                 <p class="pro-price">
-            //                     <span class="pro-unit">¥</span>
-            //                     <span class="num">${proitem[i].price_min/100}</span>
-            //                     <span class="pro-flag">起</span>
-            //                 </p>
-            //             </div>`
-            // }
-            // $(".product-list1").html(html)
-            // $(".product-list2").html(html2)
+
             $(".js-wall").html(html)
 
         }
